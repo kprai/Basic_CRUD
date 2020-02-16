@@ -6,38 +6,25 @@ import { UserResource, User } from './user.resource';
 @Component({
   selector: 'app-user',
   template: `
-    <h1>CRUD User </h1><pre>{{ userData | json }}</pre>
-    <button class="btn btn-primary btn-lg"  [ngStyle]="{ 'background-color':
+    <pre>{{ userData | json }}</pre>
+    
+    <button class="btn btn-primary btn-lg btn-block" [ngStyle]="{ 'background-color':
      'lightblue' ,'color' : 'darkblue' , 'font-weight' : 'bold'}
        "(click)="getData()">Read</button>
-     <br>
-     <br>
     <button 
-    class="btn btn-primary btn-lg"  [ngStyle]="{ 'background-color':
+    class="btn btn-primary btn-lg btn-block"  [ngStyle]="{ 'background-color':
      'lightpink' ,'color' : 'purple' , 'font-weight' : 'bold'}"
     (click)="updateData()">Update</button>
-    <br>
-    <br>
-    <button 
-    class="btn btn-primary btn-lg"  [ngStyle]="{ 'background-color':
+        <button 
+    class="btn btn-primary btn-lg btn-block"  [ngStyle]="{ 'background-color':
      'lightgreen' ,'color' : 'green' , 'font-weight' : 'bold'}"
     (click)="createData()">Create</button>
-    <br>
-    <br>
-    
+      
     <button 
-    class="btn btn-primary btn-danger btn-lg"  [ngStyle]="{ 'background-color':
+    class="btn btn-primary btn-danger btn-lg btn-block"  [ngStyle]="{ 'background-color':
      'yellow' ,'color' : 'darkred' , 'font-weight' : 'bold'}"
      (click)="removeData()">Remove</button>
-    <br>
-    <br>
-    
-    <button (click)="$updateData()">$Update</button>
-    <br>
-    <br>
-    
-    <button (click)="$removeData()">$Remove</button>
-  `,
+    `,
 })
 export class UserComponent {
 
